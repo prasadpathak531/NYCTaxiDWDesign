@@ -1,0 +1,7 @@
+CREATE TABLE dbo.dimzone
+WITH (
+    DISTRIBUTION = REPLICATE,
+	 CLUSTERED COLUMNSTORE INDEX
+)
+AS 
+(SELECT * from dbo.stagezone);
